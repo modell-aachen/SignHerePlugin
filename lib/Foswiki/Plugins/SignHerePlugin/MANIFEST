@@ -1,0 +1,8 @@
+!noci
+data/System/SignHerePlugin.txt 0644 Plugin doc page
+data/System/VarSIGNATURES.txt 0644 SIGNATURES macro documentation
+lib/Foswiki/Plugins/SignHerePlugin.pm 0444 Plugin Perl module
+locale/SignHerePlugin/de.po 0644 German translation
+pub/System/SignHerePlugin/signhere.js 0644 JavaScript support code
+pub/System/SignHerePlugin/signhere_de.js 0644 JavaScript German translation
+pub/System/SignHerePlugin/signhere_en.js 0644 JavaScript English translation

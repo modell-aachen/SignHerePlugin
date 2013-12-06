@@ -1,0 +1,5 @@
+%META:TOPICINFO{author="ProjectContributor" date="1297286317" format="1.1" version="1"}%
+%META:TOPICPARENT{name="SignHerePlugin"}%
+#VarSIGNATURES
+---+++ SIGNATURES -- query and format signatures or signatures UI
+TBD.
