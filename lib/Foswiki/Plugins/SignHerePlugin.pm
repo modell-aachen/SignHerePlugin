@@ -112,7 +112,7 @@ sub _current_signatures {
     $signature = $signature->{data};
     return undef unless defined $signature && $signature !~ /^\s*$/;
 
-    $signature = eval { decode_json($signature); };
+    $signature = eval { from_json($signature); };
     if ($@) {
         Foswiki::Func::writeWarning("Error decoding signatures for ".$meta->web.".".$meta->topic.": ".$@);
         return undef;
@@ -122,7 +122,7 @@ sub _current_signatures {
 
 sub _update_signatures {
     my ($meta, $location, $signatures) = @_;
-    $meta->putKeyed('SIGNATURE', { name => $location, data => encode_json($signatures) });
+    $meta->putKeyed('SIGNATURE', { name => $location, data => to_json($signatures) });
     $meta->saveAs($meta->web, $meta->topic, dontlog => 1, minor => 1);
 }
 
@@ -267,7 +267,7 @@ sub restSubmit {
     #}
     _update_signatures($meta, $location, $signatures);
 
-    return encode_json({
+    return to_json({
         status => 'ok',
         label => $session->i18n->maketext("Amend"),
     });
